@@ -134,7 +134,7 @@ $color-16: #515151;
   font-size: inherit;
   font-family: inherit;
   padding: 20px 20px;
-  transition: 1s;
+  transition: 0.7s;
 
   &.btn {
     text-transform: uppercase;
@@ -232,7 +232,7 @@ $color-16: #515151;
     transition: 0.5s;
 
     &:hover {
-      transform: translateY(10px);
+      transform: translateY(5px);
       transition: 0.5s;
     }
   }
@@ -326,9 +326,9 @@ $color-16: #515151;
       width: 110px;
       height: 110px;
       top: -10px;
-      left: -100px;
-      background: url(/images/decor/sign-stop.png) 50% 50% /cover no-repeat;
-      filter: blur(4px);
+      left: -60px;
+      background: url(../images/decor/sign-stop.png) 50% 50% /cover no-repeat;
+      filter: blur(2px);
     }
 
     &::before {
@@ -409,7 +409,7 @@ $color-16: #515151;
     transition: 1s;
 
     &:hover {
-      transform: rotate(360deg) scaleY(2) scaleX(2);
+      transform: rotate(360deg) scaleY(1.2) scaleX(1.2);
       transition: 1s;
       box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #93D0FC;
     }
@@ -454,8 +454,8 @@ $color-16: #515151;
     height: 250px;
     top: -130px;
     right: 100px;
-    background: url(/images/decor/sign-stop-1.png) 50% 50% /cover no-repeat;
-    filter: blur(4px);
+    background: url(../images/decor/sign-stop-1.png) 50% 50% /cover no-repeat;
+    filter: blur(2px);
 
   }
 
@@ -466,8 +466,8 @@ $color-16: #515151;
     height: 120px;
     top: 350px;
     left: 290px;
-    background: url(/images/decor/sign-y.png) 50% 50% /cover no-repeat;
-    filter: blur(4px);
+    background: url(../images/decor/sign-y.png) 50% 50% /cover no-repeat;
+    filter: blur(2px);
   }
 
   img {
@@ -508,7 +508,7 @@ $color-16: #515151;
 // =============================quest==========================
 
 .quest__wrapper {
-  background: #111316 url(/images/decor/mission-bcg-ef.png) center /cover no-repeat;
+  background: #111316 url(../images/decor/mission-bcg-ef.png) center /cover no-repeat;
 }
 
 .quest-bcg {
@@ -525,7 +525,7 @@ $color-16: #515151;
     content: "";
     width: 1562px;
     height: 760px;
-    background: url(/images/decor/iskra.svg) 50% 50% /cover no-repeat;
+    background: url(../images/decor/iskra.svg) 50% 50% /cover no-repeat;
   }
 }
 
@@ -572,7 +572,7 @@ $color-16: #515151;
       content: "";
       width: 581px;
       height: 419px;
-      background: url(/images/decor/gradient-purple.svg) 50% 50% /cover no-repeat;
+      background: url(../images/decor/gradient-purple.svg) 50% 50% /cover no-repeat;
     }
 
     &::after {
@@ -592,8 +592,28 @@ $color-16: #515151;
 .content {
   &__step {
     position: relative;
-    filter: grayscale(1);
+    filter: grayscale(0.5);
     transition: 0.8s;
+
+    &:hover {
+      filter: grayscale(0);
+      transition: 0.8s;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 82%;
+      margin: 0 auto;
+      top: 18%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: none;
+      box-shadow: 0 0 20px #D2A6FF, 0 0 30px #b181b0;
+      border-radius: 10px;
+    }
 
     &:hover {
       filter: grayscale(0);
@@ -603,9 +623,9 @@ $color-16: #515151;
   }
 
   &__numb {
-    position: absolute;
-    top: -11%;
-    left: 41%;
+    position: relative;
+    top: 9%;
+    text-align: center;
     font-family: 'Montserrat';
     font-weight: 600;
     font-size: 50px;
@@ -614,26 +634,34 @@ $color-16: #515151;
     text-shadow: 0px 0px 5px rgba(210, 166, 255, 0.2);
     z-index: 1;
 
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: -145%;
-      content: "";
-      width: 223px;
-      height: 1px;
-      background: linear-gradient(to right, #d2a6ff00 0%, #D2A6FF 51.46%, #d2a6ff00 100%);
-      z-index: -1;
-    }
+    p {
 
-    &::after {
-      position: absolute;
-      top: 40%;
-      left: -135%;
-      content: "";
-      width: 223px;
-      height: 13px;
-      background: radial-gradient(50% 50% at 50% 50%, #D2A6FF 0%, rgba(210, 166, 255, 0) 98.85%);
-      filter: blur(6px);
+      &::before {
+        position: absolute;
+        margin: 0 auto;
+        top: 49%;
+        left: 0;
+        right: 0;
+        content: "";
+        width: 223px;
+        height: 1px;
+        background: linear-gradient(to right, #d2a6ff00 0%, #D2A6FF 51.46%, #d2a6ff00 100%);
+        z-index: -1;
+      }
+
+      &::after {
+        position: absolute;
+        margin: 0 auto;
+        top: 10%;
+        left: 0;
+        right: 0;
+        content: "";
+        width: 223px;
+        height: 40px;
+        background: radial-gradient(50% 50% at 50% 50%, #D2A6FF 0%, rgba(210, 166, 255, 0) 100.85%);
+        filter: blur(2px);
+        opacity: 0.6;
+      }
     }
 
   }
@@ -681,7 +709,7 @@ $color-16: #515151;
       letter-spacing: 0.03em;
       height: 51px;
       width: 228px;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
   }
 }
@@ -696,7 +724,7 @@ $color-16: #515151;
 .mission {
   padding-top: 130px;
   padding-bottom: 101px;
-  background: #111316 url(/images/decor/mission-bcg-ef.png) center /cover no-repeat;
+  background: #111316 url(../images/decor/mission-bcg-ef.png) center /cover no-repeat;
 }
 
 // =============================mission==========================
@@ -737,7 +765,6 @@ $color-16: #515151;
   // .mission__img-max-size
 
   &__img-max-size {
-
     position: absolute;
     top: -108px;
     right: -44%;
@@ -800,7 +827,7 @@ $color-16: #515151;
     border: 1px solid #343434;
     border-radius: 10px;
     margin-left: 21px;
-    background: url(/images/decor/mission-cont-bcg.png) center /cover no-repeat;
+    background: url(../images/decor/mission-cont-bcg.png) center /cover no-repeat;
     position: relative;
     z-index: 1;
 
@@ -903,16 +930,16 @@ $color-16: #515151;
     margin-left: 100px;
     background: linear-gradient(89.85deg, rgba(147, 208, 252, 0.3) 0.1%, rgba(210, 166, 255, 0.3) 95.31%);
     box-shadow: inset 0px 0px 9px rgba(255, 255, 255, 0.35);
+    transition: 1s;
     border-radius: 25px;
     backdrop-filter: blur(7px);
     position: relative;
     z-index: 1;
-    transition: 0.8s;
 
     &:hover {
-      transition: 0.8s;
       transform: scaleY(1.05) scaleX(1.05);
-      box-shadow: 0 0 20px #93d0fc, 0 0 40px #93d0fc;
+      transition: 1s;
+      box-shadow: 0 0 5px #93d0fc;
     }
 
     &::before {
@@ -1035,7 +1062,7 @@ $color-16: #515151;
 
 // =============================willyouget==========================
 .willyouget {
-  background: #111316 url(/images/decor/mission-bcg-ef.png) center /cover no-repeat;
+  background: #111316 url(../images/decor/mission-bcg-ef.png) center /cover no-repeat;
   padding-top: 130px;
   padding-bottom: 206px;
 
@@ -1948,6 +1975,21 @@ $color-16: #515151;
     }
   }
 
+  .willyouget__title-h1-bcg {
+    font-size: 12vw;
+  }
+
+  .willyouget__title-text-bcg {
+    font-size: 12vw;
+
+
+  }
+
+  // ==============popup=======================
+  .popup-content {
+    max-width: 550px;
+    max-height: 625px;
+  }
 }
 
 /* ===============1000==================== */
@@ -2141,6 +2183,8 @@ $color-16: #515151;
 
     &__title-h1-bcg {
       opacity: 0.9;
+      top: -150%;
+      right: 45%;
     }
 
     &__title-text-bcg {
@@ -2154,7 +2198,7 @@ $color-16: #515151;
         left: 8%;
         width: 50em;
         height: 30em;
-        background: url(/images/decor/Moto-3.png) 50% 50%/cover no-repeat;
+        background: url(../images/decor/Moto-3.png) 50% 50%/cover no-repeat;
         opacity: 0.4;
       }
     }
@@ -2168,7 +2212,7 @@ $color-16: #515151;
         right: -50%;
         width: 50em;
         height: 30em;
-        background: url(/images/decor/Auto.png)50% 50%/cover no-repeat;
+        background: url(../images/decor/Auto.png)50% 50%/cover no-repeat;
       }
 
       &::after {
@@ -2460,6 +2504,11 @@ $color-16: #515151;
       left: -30%;
     }
   }
+
+  // ================================================
+  .willyouget__title-h1-bcg {
+    top: -100%;
+  }
 }
 
 /* ===============650==================== */
@@ -2522,6 +2571,7 @@ $color-16: #515151;
     &__title-h1-bcg {
       top: -85%;
       right: 50%;
+      font-size: 10vw;
     }
 
     &__title-text {
@@ -2533,6 +2583,7 @@ $color-16: #515151;
 
     &__title-text-bcg {
       top: -355%;
+      font-size: 10vw;
     }
   }
 
@@ -2627,7 +2678,8 @@ $color-16: #515151;
   %button {
     padding: 15px 15px;
   }
-  %btn-text{
+
+  %btn-text {
     font-size: 12px;
   }
 }
@@ -2763,10 +2815,12 @@ $color-16: #515151;
 
       h1 {
         font-size: 14px;
+        padding: 18px 0 4px 22px;
       }
 
       p {
         font-size: 11px;
+        padding: 0px 15px 15px 22px;
       }
 
       &::before {
