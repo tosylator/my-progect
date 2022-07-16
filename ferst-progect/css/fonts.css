@@ -1,0 +1,70 @@
+@font-face{
+  font-family: CenturyGothic;
+  font-weight: 400;
+  font-style: normal;
+  src: local("CenturyGothic"),
+      url("../fonts/CenturyGothic.woff2") format("woff2"),
+      url("../fonts/CenturyGothic.woff") format("woff"),
+      url("../fonts/CenturyGothic.eot") format("eot");
+  font-display: swap;
+}
+@font-face{
+  font-family: CenturyGothic;
+  font-weight: 400;
+  font-style: italic;
+  src: local("CenturyGothic"),
+      url("../fonts/CenturyGothic-Italic.woff2") format("woff2"),
+      url("../fonts/CenturyGothic-Italic.woff") format("woff"),
+      url("../fonts/CenturyGothic-Italic.eot") format("eot");
+  font-display: swap;
+}
+@font-face{
+  font-family: CenturyGothic;
+  font-weight: 700;
+  font-style: normal;
+  src: local("CenturyGothic"),
+      url("../fonts/CenturyGothic-Bold.woff2") format("woff2"),
+      url("../fonts/CenturyGothic-Bold.woff") format("woff"),
+      url("../fonts/CenturyGothic-Bold.eot") format("eot");
+  font-display: swap;
+}
+@font-face{
+  font-family: CenturyGothic;
+  font-weight: 700;
+  font-style: italic;
+  src: local("CenturyGothic"),
+      url("../fonts/CenturyGothic-BoldItalic.woff2") format("woff2"),
+      url("../fonts/CenturyGothic-BoldItalic.woff") format("woff"),
+      url("../fonts/CenturyGothic-BoldItalic.eot") format("eot");
+  font-display: swap;
+}
+@font-face{
+  font-family: Montserrat;
+  font-weight: 300;
+  font-style: normal;
+  src: local("Montserrat"),
+      url("../fonts/Montserrat-Light.woff2") format("woff2"),
+      url("../fonts/Montserrat-Light.woff") format("woff"),
+      url("../fonts/Montserrat-Light.eot") format("eot");
+  font-display: swap;
+}
+@font-face{
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: normal;
+  src: local("Montserrat"),
+      url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+      url("../fonts/Montserrat-SemiBold.woff") format("woff"),
+      url("../fonts/Montserrat-SemiBold.eot") format("eot");
+  font-display: swap;
+}
+@font-face{
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: normal;
+  src: local("Montserrat"),
+      url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+      url("../fonts/Montserrat-Bold.woff") format("woff"),
+      url("../fonts/Montserrat-Bold.eot") format("eot");
+  font-display: swap;
+}
