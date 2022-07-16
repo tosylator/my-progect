@@ -116,14 +116,6 @@ $color-16: #515151;
   letter-spacing: 0.03em;
 }
 
-%text-button {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.7;
-  letter-spacing: 0.1em;
-}
-
 %button {
   position: relative;
   display: inline-block;
@@ -135,47 +127,44 @@ $color-16: #515151;
   font-family: inherit;
   padding: 20px 20px;
   transition: 0.7s;
+  z-index: 2;
+  text-transform: uppercase;
+  background: $color-4;
+  border-radius: 20px;
+  transform-style: preserve-3d;
 
-  &.btn {
-    text-transform: uppercase;
-    background: $color-4;
-    border-radius: 20px;
-    transform-style: preserve-3d;
-    transition: transform 0, 5s;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 85%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-5;
+    border-radius: inherit;
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 0.8s, box-shadow 0.8s;
+    box-shadow: 0 0 10px #F2FF5D, 0 0 20px #F2FF5D, 0 0 30px #F2FF5D, 0 0 40px #F2FF5D, 0 0 50px #F2FF5D, 0 0 60px #F2FF5D;
+  }
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 85%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: $color-5;
-      border-radius: inherit;
-      transform: translate3d(0, 0.75em, -1em);
-      transition: transform 0.8s, box-shadow 0.8s;
-      box-shadow: 0 0 10px #F2FF5D, 0 0 20px #F2FF5D, 0 0 30px #F2FF5D, 0 0 40px #F2FF5D, 0 0 50px #F2FF5D, 0 0 60px #F2FF5D;
-    }
+  &:hover {
+    box-shadow: 0 0 10px #F2FF5D, 0 0 20px #F2FF5D, 0 0 40px #F2FF5D;
+    transform: translate(0, 0.25em);
+    transition: transform 1s;
+  }
 
-    &:hover {
-      box-shadow: 0 0 10px #F2FF5D, 0 0 20px #F2FF5D, 0 0 40px #F2FF5D;
-      transform: translate(0, 0.25em);
-      transition: transform 1s;
-    }
+  &:hover::before {
+    transform: translate3d(0, 0.5em, -1em);
+  }
 
-    &:hover::before {
-      transform: translate3d(0, 0.5em, -1em);
-    }
+  &:active {
+    transform: translate(0em, 0.75em);
+  }
 
-    &:active {
-      transform: translate(0em, 0.75em);
-    }
-
-    &:active::before {
-      transform: translate3d(0, 0, -1em);
-    }
+  &:active::before {
+    transform: translate3d(0, 0, -1em);
   }
 }
 
@@ -187,7 +176,6 @@ $color-16: #515151;
   line-height: 17px;
   letter-spacing: 0.1em;
   color: $color-16;
-
 }
 
 // Для обращения @extend % - название шаблона;
@@ -355,15 +343,15 @@ $color-16: #515151;
 }
 
 .body-item-2-button {
-  z-index: 2;
+  padding-bottom: 105px;
 
-  &btn {
+  button {
     @extend %button;
-
-    &-text {
-      @extend %btn-text;
-    }
   }
+}
+
+.button-text {
+  @extend %btn-text;
 }
 
 .body-item {
@@ -372,7 +360,7 @@ $color-16: #515151;
 
   &__arrow {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 7px;
   }
 
@@ -838,7 +826,7 @@ $color-16: #515151;
       content: "";
       width: 1069px;
       height: 1005px;
-      background: url(/images/decor/mission-cont-grad.png) center /cover no-repeat;
+      background: url(../images/decor/mission-cont-grad.png) center /cover no-repeat;
       z-index: -1;
     }
 
@@ -849,9 +837,9 @@ $color-16: #515151;
       top: -5%;
       left: -15%;
       transform: rotate(356deg);
-      filter: blur(2px);
+      filter: blur(1px);
       content: "";
-      background: url(/images/decor/mission-cont-decor-1.png) center /cover no-repeat;
+      background: url(../images/decor/mission-cont-decor-1.png) center /cover no-repeat;
     }
   }
 
@@ -1169,7 +1157,7 @@ $color-16: #515151;
       top: -120%;
       left: -120%;
       content: "";
-      background: url(/images/decor/Moto.png) 50% 50%/ cover no-repeat;
+      background: url(../images/decor/Moto.png) 50% 50%/ cover no-repeat;
       z-index: -1;
       opacity: 0.9;
     }
@@ -1181,7 +1169,7 @@ $color-16: #515151;
       top: 65%;
       left: -17%;
       content: "";
-      background: url(/images/decor/sign-stop-1.png) 50% 50%/ cover no-repeat;
+      background: url(../images/decor/sign-stop-1.png) 50% 50%/ cover no-repeat;
       filter: blur(3px);
     }
   }
@@ -1203,7 +1191,7 @@ $color-16: #515151;
       top: -120%;
       right: -120%;
       content: "";
-      background: url(/images/decor/moto-2.png) 50% 50%/ cover no-repeat;
+      background: url(../images/decor/moto-2.png) 50% 50%/ cover no-repeat;
       z-index: -1;
       opacity: 0.9;
     }
@@ -1215,7 +1203,7 @@ $color-16: #515151;
       top: 0%;
       right: -12%;
       content: "";
-      background: url(/images/decor/tire.png) 50% 50%/ cover no-repeat;
+      background: url(../images/decor/tire.png) 50% 50%/ cover no-repeat;
       filter: blur(3px);
     }
   }
@@ -1260,7 +1248,7 @@ $color-16: #515151;
 .accardion {
   padding-top: 129px;
   // padding-bottom: 370px;
-  background: url(/images/fonts/bcg-accardion.png) center /cover no-repeat;
+  background: url(../images/fonts/bcg-accardion.png) center /cover no-repeat;
 
   &__title {
     max-width: 550px;
@@ -1274,7 +1262,7 @@ $color-16: #515151;
       left: -30%;
       width: 960px;
       height: 240px;
-      background: url(/images/decor/accardiont-title-bcg.png) 50% 50% /cover no-repeat;
+      background: url(../images/decor/accardiont-title-bcg.png) 50% 50% /cover no-repeat;
     }
 
     h1 {
@@ -1304,7 +1292,7 @@ $color-16: #515151;
   padding: 40px 40px;
   position: relative;
   margin: 0 auto;
-  z-index: 1;
+  z-index: 3;
 
   &::after {
     z-index: -1;
@@ -1314,7 +1302,7 @@ $color-16: #515151;
     content: "";
     width: 1908px;
     height: 717px;
-    background: url(/images/decor/accardion-gradient.png)50% 50% /cover no-repeat;
+    background: url(../images/decor/accardion-gradient.png)50% 50% /cover no-repeat;
     opacity: 0.5;
   }
 }
@@ -1368,7 +1356,7 @@ $color-16: #515151;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("/images/decor/accordion-1.svg");
+  background-image: url("../images/decor/accordion-1.svg");
 }
 
 .accordion__button-active::after {
@@ -1434,10 +1422,9 @@ $color-16: #515151;
 
 // =============================footer==========================
 .footer {
-  margin-top: -10px;
   z-index: 1;
   padding-top: 257px;
-  background: url(/images/fonts/footer-bcg.png) 50% 50%/cover no-repeat;
+  background: url(../images/fonts/footer-bcg.png) 50% 50%/cover no-repeat;
   position: relative;
 
   &__title {
@@ -1487,12 +1474,8 @@ $color-16: #515151;
     &-item {
       display: flex;
 
-      .btn {
+      button {
         @extend %button;
-
-        &-text {
-          @extend %btn-text;
-        }
       }
 
     }
@@ -1569,6 +1552,10 @@ $color-16: #515151;
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.btn-text {
+  @extend %btn-text;
 }
 
 .footer-instagram {
@@ -1727,7 +1714,6 @@ $color-16: #515151;
   padding: 10px;
   background-color: #ffffff;
   border-radius: 5px;
-  // box-shadow: 0px 0px 10px #000;
   position: relative;
 
   @keyframes ani {
@@ -1798,11 +1784,9 @@ $color-16: #515151;
       transition: 0.8s;
     }
   }
-
 }
 
 .get {
-
 
   &__form {
     display: flex;
@@ -1838,22 +1822,16 @@ $color-16: #515151;
   color: #383838;
 }
 
-.btn {
-  @extend %button;
-  margin-top: 30px;
-  margin-bottom: 50px;
+.popup-botton {
+  margin-top: 25px;
 
-  &::before {
-    box-shadow: 0 0 10px #F2FF5D;
+  button {
+    @extend %button;
+
+    &::before {
+      box-shadow: 0 0 10px #F2FF5D, 0 0 20px #F2FF5D, 0 0 30px #F2FF5D;
+    }
   }
-
-  &:hover {
-    transition: 0.5s;
-  }
-}
-
-.btn-text {
-  @extend %btn-text;
 }
 
 // =============================media==========================
@@ -1990,6 +1968,11 @@ $color-16: #515151;
     max-width: 550px;
     max-height: 625px;
   }
+
+  .popup-botton {
+    margin-top: 15px;
+
+  }
 }
 
 /* ===============1000==================== */
@@ -2020,6 +2003,7 @@ $color-16: #515151;
 
     &__body-block-1 {
       margin: 0 auto;
+      max-width: 400px;
 
       &__box {
         margin-bottom: 35px;
@@ -2051,6 +2035,10 @@ $color-16: #515151;
     }
   }
 
+  .body-item-2-button {
+    padding-bottom: 0;
+  }
+
   .body-item {
     position: relative;
 
@@ -2078,7 +2066,7 @@ $color-16: #515151;
 
   // button 
   .header__bottom {
-    margin-top: -170px;
+    margin-top: -160px;
 
     img {
       max-height: 400px;
@@ -2087,7 +2075,7 @@ $color-16: #515151;
 
   .bottom-content-itm__img-1 {
     left: -100px;
-    top: 65px;
+    top: 75px;
   }
 
   .bottom-content-itm__img-2 {
@@ -2182,13 +2170,11 @@ $color-16: #515151;
     }
 
     &__title-h1-bcg {
-      opacity: 0.9;
       top: -150%;
       right: 45%;
     }
 
     &__title-text-bcg {
-      opacity: 0.9;
       top: -330%;
     }
 
@@ -2424,8 +2410,10 @@ $color-16: #515151;
 
   .header {
     &__body-block-1 {
+      max-width: 300px;
+
       &::before {
-        background: none;
+        // background: none;
       }
     }
   }
@@ -2441,6 +2429,11 @@ $color-16: #515151;
       top: 42%;
       left: 24%;
     }
+  }
+
+  .bottom-content-itm__img-2 {
+    right: -40%;
+    top: 75px;
   }
 
   // ==============mission=======================
@@ -2632,6 +2625,10 @@ $color-16: #515151;
     flex-direction: column;
   }
 
+  .footer__button-box-1 {
+    margin-bottom: 20px;
+  }
+
   .footer-instagram {
     max-width: 45px;
     max-height: 45px;
@@ -2681,6 +2678,53 @@ $color-16: #515151;
 
   %btn-text {
     font-size: 12px;
+  }
+
+  // ===================popup=============
+  .popup-content {
+    max-width: 450px;
+    max-height: 525px;
+
+    h1 {
+      font-size: 3vw;
+    }
+
+    h2 {
+      font-size: 2vw;
+    }
+
+    p {
+      font-size: 1.9vw;
+      padding: 10px 30px 10px 30px;
+    }
+  }
+
+  .text-form {
+    font-size: 1.9vw;
+  }
+
+  .get {
+    &__content-input {
+      width: 300px;
+      height: 35px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .get__form {
+    margin-top: 10px;
+  }
+
+  .popup-content {
+    max-width: 420px;
+    max-height: 525px;
+  }
+
+  .popup-close {
+    svg {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
@@ -2853,6 +2897,17 @@ $color-16: #515151;
   .accordions-content-itm {
     margin-top: -100px;
   }
+
+  // ===================popup=============
+  .popup-content {
+    max-width: 370px;
+    max-height: 480px;
+
+    p {
+      width: 350px;
+      padding: 0;
+    }
+  }
 }
 
 /* ===============550==================== */
@@ -2903,6 +2958,21 @@ $color-16: #515151;
 
     &-panel__content {
       padding: 15px 20px;
+    }
+  }
+
+  // ===================popup=============
+  .popup-content {
+    max-width: 370px;
+    max-height: 480px;
+
+    h1 {
+      padding-top: 15px;
+    }
+
+    p {
+      width: 320px;
+      padding: 10px 15px 10px 15px;
     }
   }
 }
@@ -3044,6 +3114,21 @@ $color-16: #515151;
       font-size: 10px;
     }
   }
+
+  // ===================popup=============
+  .popup-content {
+    max-width: 300px;
+    max-height: 455px;
+
+    p {
+      width: 275px;
+    }
+  }
+
+  .get__content-input {
+    width: 230px;
+  }
+
 }
 
 /* ===============450==================== */
@@ -3130,6 +3215,56 @@ $color-16: #515151;
       }
     }
   }
+
+  // ===================popup=============
+  .popup-content {
+    max-width: 275px;
+    max-height: 360px;
+    padding: 0px;
+
+    h1 {
+      padding-top: 10px;
+      font-size: 10px;
+    }
+
+    h2 {
+      font-size: 9px;
+    }
+
+    p {
+      font-size: 8px;
+      width: 275px;
+    }
+  }
+
+  .text-form {
+    font-size: 8px;
+  }
+
+  .get__content-input {
+    width: 220px;
+    height: 25px;
+    font-size: 8px;
+    padding: 5px 16px;
+
+  }
+
+  .popup-botton {
+    margin-top: 10px;
+
+    button {
+      padding: 10px 10px;
+
+      &::before {
+        width: 100%;
+        height: 80%;
+      }
+    }
+  }
+
+  .btn-text {
+    font-size: 8px;
+  }
 }
 
 /* ===============<400==================== */
@@ -3211,43 +3346,91 @@ $color-16: #515151;
     max-width: 250px;
     max-height: 250px;
   }
+}
 
-  // ==============accardion=======================
-  .accardion {
-    &__title {
-      padding-bottom: 15px;
+// ==============accardion=======================
+.accardion {
+  margin-top: -10px;
 
-      h1 {
-        font-size: 19px;
-      }
+  &__title {
+    padding-bottom: 15px;
 
-      p {
-        font-size: 12px;
-      }
+    h1 {
+      font-size: 19px;
     }
 
-    &__title::before {
-      top: -190%;
-      left: -55%;
+    p {
+      font-size: 12px;
     }
   }
 
-  .accordions {
-    padding: 10px 10px;
+  &__title::before {
+    top: -190%;
+    left: -55%;
   }
+}
 
-  .accordion {
+.accordions {
+  padding: 10px 10px;
+}
+
+.accordion {
 
 
-    &__panel {
-      padding: 0 15px;
+  &__panel {
+    padding: 0 15px;
 
-      p {
-        padding: 20px 15px 5px 15px;
-      }
+    p {
+      padding: 20px 15px 5px 15px;
     }
+  }
+
+}
+
+// ===================popup=============
+.popup-content {
+  max-width: 250px;
+  max-height: 310px;
+  padding: 0px;
+
+  h1 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  h2 {
+    font-size: 9px;
+  }
+
+  p {
+    padding: 5px 15px 5px 15px;
+    width: 253px;
+  }
+}
+
+.get__form {
+  margin-top: 5px;
+}
+
+.get__content-input {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.popup-botton {
+  margin-top: 5px;
+}
+
+.popup-close {
+  top: 2px;
+  right: 8px;
+
+  svg {
+    width: 10px;
+    height: 10px;
 
   }
+}
 }
 
 /* ===============320==================== */
