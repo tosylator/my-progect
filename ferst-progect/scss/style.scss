@@ -1311,7 +1311,7 @@ $color-16: #515151;
   width: 100%;
   height: auto;
   margin-bottom: 20px;
-  
+
 }
 
 .accordion__slot {
@@ -2633,7 +2633,7 @@ $color-16: #515151;
 
   .bottom-inner {
     &__logo {
-      margin-top: 85px;
+      padding-top: 100px;
       padding-bottom: 25px;
     }
 
@@ -2675,6 +2675,12 @@ $color-16: #515151;
 
   %btn-text {
     font-size: 12px;
+  }
+
+  .footer__item-2-arrow-1 {
+    top: 59px;
+    left: 104px;
+    transform: rotateY(160deg) rotateZ(31deg);
   }
 
   // ===================popup=============
@@ -3213,6 +3219,9 @@ $color-16: #515151;
     }
   }
 
+  // ===================footer=============
+  
+
   // ===================popup=============
   .popup-content {
     max-width: 275px;
@@ -3345,92 +3354,93 @@ $color-16: #515151;
   }
 
 
-// ==============accardion=======================
-.accardion {
-  margin-top: -10px;
+  // ==============accardion=======================
+  .accardion {
+    margin-top: -10px;
 
-  &__title {
-    padding-bottom: 35px;
+    &__title {
+      padding-bottom: 35px;
+
+      h1 {
+        font-size: 19px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+
+    &__title::before {
+      top: -190%;
+      left: -55%;
+    }
+  }
+
+  .accordions {
+    padding: 10px 10px;
+  }
+
+  .accordion {
+
+
+    &__panel {
+      padding: 0 15px;
+
+      p {
+        padding: 20px 15px 5px 15px;
+      }
+    }
+
+  }
+
+  .accordions-content-itm__img-2 {
+    max-width: 50em;
+  }
+
+  // ===================popup=============
+  .popup-content {
+    max-width: 250px;
+    max-height: 310px;
+    padding: 0px;
 
     h1 {
-      font-size: 19px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 9px;
     }
 
     p {
-      font-size: 12px;
+      padding: 5px 15px 5px 15px;
+      width: 253px;
     }
   }
 
-  &__title::before {
-    top: -190%;
-    left: -55%;
+  .get__form {
+    margin-top: 5px;
   }
-}
 
-.accordions {
-  padding: 10px 10px;
-}
+  .get__content-input {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
 
-.accordion {
+  .popup-botton {
+    margin-top: 5px;
+  }
 
+  .popup-close {
+    top: 2px;
+    right: 8px;
 
-  &__panel {
-    padding: 0 15px;
+    svg {
+      width: 10px;
+      height: 10px;
 
-    p {
-      padding: 20px 15px 5px 15px;
     }
   }
-
-}
-.accordions-content-itm__img-2{
-  max-width: 50em;
-}
-
-// ===================popup=============
-.popup-content {
-  max-width: 250px;
-  max-height: 310px;
-  padding: 0px;
-
-  h1 {
-    padding-top: 10px;
-    padding-bottom: 5px;
-  }
-
-  h2 {
-    font-size: 9px;
-  }
-
-  p {
-    padding: 5px 15px 5px 15px;
-    width: 253px;
-  }
-}
-
-.get__form {
-  margin-top: 5px;
-}
-
-.get__content-input {
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-.popup-botton {
-  margin-top: 5px;
-}
-
-.popup-close {
-  top: 2px;
-  right: 8px;
-
-  svg {
-    width: 10px;
-    height: 10px;
-
-  }
-}
 }
 
 /* ===============320==================== */

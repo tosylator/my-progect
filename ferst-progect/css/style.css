@@ -2355,7 +2355,7 @@ a {
   }
 
   .bottom-inner__logo {
-    margin-top: 85px;
+    padding-top: 100px;
     padding-bottom: 25px;
   }
   .bottom-inner__text {
@@ -2386,6 +2386,13 @@ a {
 
   .button-text, .btn-text {
     font-size: 12px;
+  }
+
+  .footer__item-2-arrow-1 {
+    top: 59px;
+    left: 104px;
+    -webkit-transform: rotateY(160deg) rotateZ(31deg);
+            transform: rotateY(160deg) rotateZ(31deg);
   }
 
   .popup-content {
