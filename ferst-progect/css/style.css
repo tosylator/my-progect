@@ -1152,6 +1152,7 @@ a {
 
 .accardion {
   padding-top: 129px;
+  margin-top: -10px;
   background: url(../images/fonts/bcg-accardion.png) center/cover no-repeat;
 }
 .accardion__title {
@@ -1333,7 +1334,6 @@ a {
 }
 
 .footer {
-  margin-top: -10px;
   z-index: 1;
   padding-top: 257px;
   background: url(../images/fonts/footer-bcg.png) 50% 50%/cover no-repeat;
@@ -2349,10 +2349,6 @@ a {
             flex-direction: column;
   }
 
-  .footer__button-box-1 {
-    margin-bottom: 20px;
-  }
-
   .footer-instagram {
     max-width: 45px;
     max-height: 45px;
@@ -2866,13 +2862,12 @@ a {
     max-width: 250px;
     max-height: 250px;
   }
-  .content__wrapper .willyouget__body:hover {
-    -webkit-transform: scaleY(1.05) scaleX(1.05);
-            transform: scaleY(1.05) scaleX(1.05);
-  }
 
+  .accardion {
+    margin-top: -10px;
+  }
   .accardion__title {
-    padding-bottom: 15px;
+    padding-bottom: 35px;
   }
   .accardion__title h1 {
     font-size: 19px;
@@ -2894,6 +2889,10 @@ a {
   }
   .accordion__panel p {
     padding: 20px 15px 5px 15px;
+  }
+
+  .accordions-content-itm__img-2 {
+    max-width: 50em;
   }
 
   .popup-content {
