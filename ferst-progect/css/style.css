@@ -2010,7 +2010,7 @@ a {
     left: 8%;
     width: 50em;
     height: 30em;
-    background: url(../images/decor/Moto-3.png) 50% 50%/cover no-repeat;
+    background: url(../images/decor/moto-3.png) 50% 50%/cover no-repeat;
     opacity: 0.4;
   }
   .willyouget__content-2 {
@@ -2022,7 +2022,7 @@ a {
     right: -50%;
     width: 50em;
     height: 30em;
-    background: url(../images/decor/Auto.png) 50% 50%/cover no-repeat;
+    background: url(../images/decor/auto.png) 50% 50%/cover no-repeat;
   }
   .willyouget__content-2::after {
     width: 95px;
