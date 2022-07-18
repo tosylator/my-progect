@@ -2114,6 +2114,15 @@ a {
 }
 /* ===============800==================== */
 @media (max-width: 800px) {
+  /* ==================quest============================== */
+  .quest__title h1 {
+    padding-bottom: 10px;
+  }
+
+  .quest__content {
+    padding-top: 40px;
+  }
+
   /* ===============accordions==================== */
   .accordions-content-itm__img-1 {
     max-width: 60em;
@@ -2900,45 +2909,6 @@ a {
 
   .accordions-content-itm__img-2 {
     max-width: 50em;
-  }
-
-  .popup-content {
-    max-width: 250px;
-    max-height: 310px;
-    padding: 0px;
-  }
-  .popup-content h1 {
-    padding-top: 10px;
-    padding-bottom: 5px;
-  }
-  .popup-content h2 {
-    font-size: 9px;
-  }
-  .popup-content p {
-    padding: 5px 15px 5px 15px;
-    width: 253px;
-  }
-
-  .get__form {
-    margin-top: 5px;
-  }
-
-  .get__content-input {
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-
-  .popup-botton {
-    margin-top: 5px;
-  }
-
-  .popup-close {
-    top: 2px;
-    right: 8px;
-  }
-  .popup-close svg {
-    width: 10px;
-    height: 10px;
   }
 }
 /* ===============320==================== */
