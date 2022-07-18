@@ -141,7 +141,7 @@ a {
 }
 
 .text-form, .get__content-input, .popup-content p, .popup-content h2, .countdown-text, .bottom-inner__rights p, .bottom-inner__text, .footer__item-2-text, .footer__title h2, .accordion-panel__content, .content__wrapper li, .willyouget__title-text p, .mission__content-mission p, .mission__box-text-2 p, .mission__box-text-1 p, .mission__item-text, .content__desc p, .body-item__text, .header__body-block-1__box p, .top-cont__left p {
-  font-family: "Century Gothic";
+  font-family: "CenturyGothic";
   font-style: normal;
   font-weight: 400;
   line-height: 1.7;
@@ -149,7 +149,7 @@ a {
 }
 
 .popup-content p span, .popup-content h2 span, .footer__item-2-text span, .footer__title h2 span, .accordion__button p, .content__wrapper h1, .mission__box-text-2 p span, .mission__box-text-1 p span, .body-item__text span, .top-cont__left span {
-  font-family: "Century Gothic";
+  font-family: "CenturyGothic";
   font-style: normal;
   font-weight: 700;
   line-height: 1.8;
@@ -804,7 +804,7 @@ a {
 }
 .mission__box-text-1 h2 {
   padding: 31px 52px 20px 27px;
-  font-family: "Century Gothic";
+  font-family: "CenturyGothic";
   font-style: italic;
   font-weight: 700;
   font-size: 20px;
@@ -828,7 +828,7 @@ a {
 }
 .mission__box-text-2 h2 {
   padding: 0px 54px 20px 27px;
-  font-family: "Century Gothic";
+  font-family: "CenturyGothic";
   font-style: italic;
   font-weight: 700;
   font-size: 20px;
@@ -1265,7 +1265,7 @@ a {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("../images/decor/accordion-1.svg");
+  background-image: url(../images/decor/accordion-1.svg);
 }
 
 .accordion__button-active::after {
