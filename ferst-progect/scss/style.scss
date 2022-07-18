@@ -101,7 +101,7 @@ $color-16: #515151;
 }
 
 %text {
-  font-family: 'Century Gothic';
+  font-family: 'CenturyGothic';
   font-style: normal;
   font-weight: 400;
   line-height: 1.7;
@@ -109,7 +109,7 @@ $color-16: #515151;
 }
 
 %text-max {
-  font-family: 'Century Gothic';
+  font-family: 'CenturyGothic';
   font-style: normal;
   font-weight: 700;
   line-height: 1.8;
@@ -848,7 +848,7 @@ $color-16: #515151;
   &__box-text-1 {
     h2 {
       padding: 31px 52px 20px 27px;
-      font-family: 'Century Gothic';
+      font-family: 'CenturyGothic';
       font-style: italic;
       font-weight: 700;
       font-size: 20px;
@@ -881,7 +881,7 @@ $color-16: #515151;
   &__box-text-2 {
     h2 {
       padding: 0px 54px 20px 27px;
-      font-family: 'Century Gothic';
+      font-family: 'CenturyGothic';
       font-style: italic;
       font-weight: 700;
       font-size: 20px;
@@ -1357,7 +1357,7 @@ $color-16: #515151;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("../images/decor/accordion-1.svg");
+  background-image: url(../images/decor/accordion-1.svg);
 }
 
 .accordion__button-active::after {
@@ -2199,7 +2199,7 @@ $color-16: #515151;
         right: -50%;
         width: 50em;
         height: 30em;
-        background: url(../images/decor/Auto.png)50% 50%/cover no-repeat;
+        background: url(../images/decor/Auto.png) 50% 50%/cover no-repeat;
       }
 
       &::after {
@@ -2321,6 +2321,7 @@ $color-16: #515151;
       padding-bottom: 10px;
     }
   }
+
   .quest__content {
     padding-top: 40px;
   }
@@ -2458,10 +2459,7 @@ $color-16: #515151;
       align-items: center;
       justify-content: center;
       margin-left: 200px;
-
-
     }
-
 
     &__button-play {
       top: -140px;
@@ -2483,7 +2481,6 @@ $color-16: #515151;
       top: -95px;
       right: 45%;
     }
-
   }
 
   // ==============accardion=======================
@@ -2518,7 +2515,6 @@ $color-16: #515151;
 /* ===============650==================== */
 @media(max-width:650px) {
 
-  // ==============mqin=======================
   // ==============quest=======================
   .quest__title {
     margin-left: 0;
@@ -2582,7 +2578,6 @@ $color-16: #515151;
       p {
         font-size: 13px;
       }
-
     }
 
     &__title-text-bcg {
@@ -2648,9 +2643,7 @@ $color-16: #515151;
     }
 
     &__text {
-
       padding-bottom: 36px;
-
     }
 
     &__rights {
